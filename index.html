@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="index.js" defer></script>
+        <style>
+            input#name:invalid:focus{
+                border: 3px red;
+            }
+            input#email:invalid:focus{
+                border: 3px red;
+            }
+            input#password:invalid:focus{
+                border: 3px red;
+            }
+            input#dob:invalid:focus{
+                border: 3px red;
+            }
+        </style>
+        <title>Registration Form</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body class="bg-rose-800 text-white">
+        <div class="bg-auto flex min-h-screen m-auto justify-center items-center p-6"">
+            <div class="bg-auto bg-gradient-to-r from-purple-500 to-pink-500 p-8 rounded-lg shadow-lg max-w-lg w-full" >
+                <h2 class="font-mono text-3xl text-center font-black mb-5">REGISTRATION FORM</h2>
+                <form id="form">
+                    <label for="name" class="text-lg font-semibold block mb-1">Enter Name</label>
+                    <input required type="text" name="name" id="name" placeholder="   Required"  
+                    class="shadow-2xl rounded-full border-2 border-white mb-6 w-full h-12 text-rose-800" />
+
+                    <label for="email" class="text-lg font-semibold block mb-1">Enter Email</label>
+                    <input required type="email" name="email" id="email" placeholder="   Required"  
+                    class="shadow-2xl rounded-full border-2 border-white mb-6 w-full h-12 text-rose-800" />
+
+                    <label for="password" class="text-lg font-semibold block mb-1">Enter Password</label>
+                    <input required type="password" name="password" id="password" placeholder="   Required"  
+                    class="shadow-2xl rounded-full border-2 border-white mb-6 w-full h-12 text-rose-800" />
+
+                    <label for="dob" class="text-lg font-semibold block mb-1">Enter Date Of Birth</label>
+                    <input required type="date" name="dob" id="dob" placeholder="   Required"  
+                    class="shadow-2xl rounded-full border-2 border-white mb-6 w-full h-12 text-rose-800" />
+
+                    <label for="acceptTerms" class="flex items-center mb-4">
+                        <input
+                          required
+                          type="checkbox" id="acceptTerms" name="acceptTerms"
+                          class="w-5 h-5 rounded-full mr-2"
+                        />
+                        <span class="text-sm font-normal">Accept Terms & Conditions</span>
+                      </label>
+
+                    <button type="submit" 
+                    class="shadow-2xl rounded-full border-2 mb-6 block bg-green-600 font-bold h-10 w-full text-white">
+                        Submit</button>
+
+                </form>
+                
+            </div>
+        </div>
+
+        <table id="table-entries" class="table-auto border-separate border-white bg-gradient-to-r from-rose-500 to-violet-500 border-4 w-full border-dotted" style="font-size: large;">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PASSWORD</th>
+                    <th>DATE OF BIRTH</th>
+                    <th>TERMS ACCEPTED?</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+    </body>
+</html>
